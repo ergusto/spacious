@@ -10,6 +10,7 @@ $spacious-spacings: (
 ) !default;
 
 $spacious-breakpoints: (
+	none: 0rem,
 	msm: 16rem,
 	mmd: 20rem,
 	mlg: 24rem,
@@ -23,138 +24,73 @@ $spacious-breakpoints: (
 ) !default;
 
 @each $spacing, $spacingValue in $spacious-spacings {
-
-	.pa#{$spacing} {
-		padding-left: $spacingValue;
-		padding-bottom: $spacingValue;
-		padding-right: $spacingValue;
-		padding-top: $spacingValue;
-	}
-
-	.pl#{$spacing} {
-		padding-left: $spacingValue;
-	}
-
-	.pb#{$spacing} {
-		padding-bottom: $spacingValue;
-	}
-
-	.pr#{$spacing} {
-		padding-right: $spacingValue;
-	}
-
-	.pt#{$spacing} {
-		padding-top: $spacingValue;
-	}
-
-	.pv#{$spacing} {
-		padding-bottom: $spacingValue;
-		padding-top: $spacingValue;
-	}
-
-	.ph#{$spacing} {
-		padding-left: $spacingValue;
-		padding-right: $spacingValue;
-	}
-
-	.ma#{$spacing} {
-		margin-left: $spacingValue;
-		margin-bottom: $spacingValue;
-		margin-right: $spacingValue;
-		margin-top: $spacingValue;
-	}
-
-	.ml#{$spacing} {
-		margin-left: $spacingValue;
-	}
-
-	.mb#{$spacing} {
-		margin-bottom: $spacingValue;
-	}
-
-	.mr#{$spacing} {
-		margin-right: $spacingValue;
-	}
-
-	.mt#{$spacing} {
-		margin-top: $spacingValue;
-	}
-
-	.mv#{$spacing} {
-		margin-bottom: $spacingValue;
-		margin-top: $spacingValue;
-	}
-
-	.mh#{$spacing} {
-		margin-left: $spacingValue;
-		margin-right: $spacingValue;
-	}
-
 	@each $breakpoint, $breakpointValue in $spacious-breakpoints {
+		$prefix: if($breakpoint == none, '', #{$breakpoint}-);
+
 		@media (min-width: #{$breakpointValue}) {
 		
-			.#{$breakpoint}-pa#{$spacing} {
+			.#{$prefix}pa#{$spacing} {
 				padding-left: $spacingValue;
 				padding-bottom: $spacingValue;
 				padding-right: $spacingValue;
 				padding-top: $spacingValue;
 			}
 
-			.#{$breakpoint}-pl#{$spacing} {
+			.#{$prefix}pl#{$spacing} {
 				padding-left: $spacingValue;
 			}
 
-			.#{$breakpoint}-pb#{$spacing} {
+			.#{$prefix}pb#{$spacing} {
 				padding-bottom: $spacingValue;
 			}
 
-			.#{$breakpoint}-pr#{$spacing} {
+			.#{$prefix}pr#{$spacing} {
 				padding-right: $spacingValue;
 			}
 
-			.#{$breakpoint}-pt#{$spacing} {
+			.#{$prefix}pt#{$spacing} {
 				padding-top: $spacingValue;
 			}
 
-			.#{$breakpoint}-pv#{$spacing} {
+			.#{$prefix}pv#{$spacing} {
 				padding-bottom: $spacingValue;
 				padding-top: $spacingValue;
 			}
 
-			.#{$breakpoint}-ph#{$spacing} {
+			.#{$prefix}ph#{$spacing} {
 				padding-left: $spacingValue;
 				padding-right: $spacingValue;
 			}
 		
-			.#{$breakpoint}-ma#{$spacing} {
+			.#{$prefix}ma#{$spacing} {
 				margin-left: $spacingValue;
 				margin-bottom: $spacingValue;
 				margin-right: $spacingValue;
 				margin-top: $spacingValue;
 			}
 
-			.#{$breakpoint}-ml#{$spacing} {
+			.#{$prefix}ml#{$spacing} {
 				margin-left: $spacingValue;
 			}
 
-			.#{$breakpoint}-mb#{$spacing} {
+			.#{$prefix}mb#{$spacing} {
 				margin-bottom: $spacingValue;
 			}
 
-			.#{$breakpoint}-mr#{$spacing} {
+			.#{$prefix}mr#{$spacing} {
 				margin-right: $spacingValue;
 			}
 
-			.#{$breakpoint}-mt#{$spacing} {
+			.#{$prefix}mt#{$spacing} {
 				margin-top: $spacingValue;
 			}
 
-			.#{$breakpoint}-mv#{$spacing} {
+			.#{$prefix}mv#{$spacing} {
 				margin-bottom: $spacingValue;
 				margin-top: $spacingValue;
 			}
 
-			.#{$breakpoint}-mh#{$spacing} {
+			.#{$prefix}mh#{$spacing} {
 				margin-left: $spacingValue;
 				margin-right: $spacingValue;
 			}
