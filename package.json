@@ -1,0 +1,19 @@
+{
+  "name": "spacious",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ergusto/spacious.git"
+  },
+  "author": "ergusto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ergusto/spacious/issues"
+  },
+  "homepage": "https://github.com/ergusto/spacious#readme"
+}

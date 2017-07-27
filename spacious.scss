@@ -1,0 +1,164 @@
+$spacious-spacings: (
+	0: 0,
+	1: .25rem,
+	2: .5rem,
+	3: 1rem,
+	4: 2rem,
+	5: 4rem,
+	6: 8rem,
+	7: 16rem
+) !default;
+
+$spacious-breakpoints: (
+	msm: 16rem,
+	mmd: 20rem,
+	mlg: 24rem,
+	tsm: 30rem,
+	tmd: 38rem,
+	tlg: 46rem,
+	ssm: 64rem,
+	smd: 74rem,
+	slg: 88rem,
+	sxlg: 106rem
+) !default;
+
+@each $spacing, $spacingValue in $spacious-spacings {
+
+	.pa#{$spacing} {
+		padding-left: $spacingValue;
+		padding-bottom: $spacingValue;
+		padding-right: $spacingValue;
+		padding-top: $spacingValue;
+	}
+
+	.pl#{$spacing} {
+		padding-left: $spacingValue;
+	}
+
+	.pb#{$spacing} {
+		padding-bottom: $spacingValue;
+	}
+
+	.pr#{$spacing} {
+		padding-right: $spacingValue;
+	}
+
+	.pt#{$spacing} {
+		padding-top: $spacingValue;
+	}
+
+	.pv#{$spacing} {
+		padding-bottom: $spacingValue;
+		padding-top: $spacingValue;
+	}
+
+	.ph#{$spacing} {
+		padding-left: $spacingValue;
+		padding-right: $spacingValue;
+	}
+
+	.ma#{$spacing} {
+		margin-left: $spacingValue;
+		margin-bottom: $spacingValue;
+		margin-right: $spacingValue;
+		margin-top: $spacingValue;
+	}
+
+	.ml#{$spacing} {
+		margin-left: $spacingValue;
+	}
+
+	.mb#{$spacing} {
+		margin-bottom: $spacingValue;
+	}
+
+	.mr#{$spacing} {
+		margin-right: $spacingValue;
+	}
+
+	.mt#{$spacing} {
+		margin-top: $spacingValue;
+	}
+
+	.mv#{$spacing} {
+		margin-bottom: $spacingValue;
+		margin-top: $spacingValue;
+	}
+
+	.mh#{$spacing} {
+		margin-left: $spacingValue;
+		margin-right: $spacingValue;
+	}
+
+	@each $breakpoint, $breakpointValue in $spacious-breakpoints {
+		@media (min-width: #{$breakpointValue}) {
+		
+			.#{$breakpoint}-pa#{$spacing} {
+				padding-left: $spacingValue;
+				padding-bottom: $spacingValue;
+				padding-right: $spacingValue;
+				padding-top: $spacingValue;
+			}
+
+			.#{$breakpoint}-pl#{$spacing} {
+				padding-left: $spacingValue;
+			}
+
+			.#{$breakpoint}-pb#{$spacing} {
+				padding-bottom: $spacingValue;
+			}
+
+			.#{$breakpoint}-pr#{$spacing} {
+				padding-right: $spacingValue;
+			}
+
+			.#{$breakpoint}-pt#{$spacing} {
+				padding-top: $spacingValue;
+			}
+
+			.#{$breakpoint}-pv#{$spacing} {
+				padding-bottom: $spacingValue;
+				padding-top: $spacingValue;
+			}
+
+			.#{$breakpoint}-ph#{$spacing} {
+				padding-left: $spacingValue;
+				padding-right: $spacingValue;
+			}
+		
+			.#{$breakpoint}-ma#{$spacing} {
+				margin-left: $spacingValue;
+				margin-bottom: $spacingValue;
+				margin-right: $spacingValue;
+				margin-top: $spacingValue;
+			}
+
+			.#{$breakpoint}-ml#{$spacing} {
+				margin-left: $spacingValue;
+			}
+
+			.#{$breakpoint}-mb#{$spacing} {
+				margin-bottom: $spacingValue;
+			}
+
+			.#{$breakpoint}-mr#{$spacing} {
+				margin-right: $spacingValue;
+			}
+
+			.#{$breakpoint}-mt#{$spacing} {
+				margin-top: $spacingValue;
+			}
+
+			.#{$breakpoint}-mv#{$spacing} {
+				margin-bottom: $spacingValue;
+				margin-top: $spacingValue;
+			}
+
+			.#{$breakpoint}-mh#{$spacing} {
+				margin-left: $spacingValue;
+				margin-right: $spacingValue;
+			}
+
+		}
+	}
+}
