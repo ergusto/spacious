@@ -11,3 +11,7 @@ For example:
 ```
 
 Translates to `margin-left-2` and `mobile-small-margin-left-3`. 
+
+Spacings start at a 1/4 of base font size (1 spacing amount) and go all the way up to 16 times base font size (7 spacing amount).
+
+With a base font size of 16, this would give the above paragraph a margin left property value of 8px below the mobile small breakpoint, and a margin left property value of 16px above.
