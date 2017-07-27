@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "./node_modules/.bin/webpack --config webpack-config.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,16 @@
   "bugs": {
     "url": "https://github.com/ergusto/spacious/issues"
   },
-  "homepage": "https://github.com/ergusto/spacious#readme"
+  "homepage": "https://github.com/ergusto/spacious#readme",
+  "devDependencies": {
+    "css-loader": "^0.28.4",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "node-sass": "^4.5.3",
+    "sass-loader": "^6.0.6",
+    "webpack": "^3.4.1"
+  },
+  "dependencies": {
+    "css-loader": "^0.28.4",
+    "style-loader": "^0.18.2"
+  }
 }
