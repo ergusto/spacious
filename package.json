@@ -2,7 +2,7 @@
   "name": "spacious",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "spacious.css",
   "scripts": {
     "build": "./node_modules/.bin/webpack --config webpack-config.js"
   },
