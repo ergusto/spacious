@@ -11,10 +11,10 @@ Padding and margin utilities formed on a ratio of your base font size. Classes f
 For example:
 
 ```html
-<p class='ml2 mbs-ml3' />
+<p class='ml2 sm-ml3' />
 ```
 
-Translates to `margin-left-2` and `mobile-small-margin-left-3`. 
+Translates to `margin-left-2` and `small-margin-left-3`. 
 
 ## Explanation
 
