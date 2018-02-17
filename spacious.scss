@@ -11,16 +11,9 @@ $spacious-spacings: (
 
 $spacious-breakpoints: (
 	none: 0rem,
-	msm: 16rem,
-	mmd: 20rem,
-	mlg: 24rem,
-	tsm: 30rem,
-	tmd: 38rem,
-	tlg: 46rem,
-	ssm: 64rem,
-	smd: 74rem,
-	slg: 88rem,
-	sxlg: 106rem
+	sm: 35rem,
+	md: 55rem,
+	lg: 65rem,
 ) !default;
 
 @each $spacing, $spacingValue in $spacious-spacings {
