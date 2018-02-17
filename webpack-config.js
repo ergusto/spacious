@@ -6,7 +6,7 @@ const extractSass = new ExtractTextPlugin({
 
 module.exports = {
 	context: __dirname,
-	entry: './spacious.scss',
+	entry: './src/spacious.scss',
 	output: {
 		filename: 'spacious.css'
 	},
