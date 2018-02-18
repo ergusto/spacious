@@ -7,10 +7,10 @@ $spacing-types: (
 
 @each $spacing-type, $spacing-property in $spacing-types {
 	@each $breakpoint, $breakpoint-value in $spacious-breakpoints {
+		$prefix: if($breakpoint == none, '', #{$breakpoint}-);
+
 		@media (min-width: #{$breakpoint-value}) {
 			@each $spacing, $spacing-value in $spacious-spacings {
-				$prefix: if($breakpoint == none, '', #{$breakpoint}-);
-			
 				.#{$prefix}#{$spacing-type}a#{$spacing} {
 					#{$spacing-property}-left: $spacing-value;
 					#{$spacing-property}-bottom: $spacing-value;
