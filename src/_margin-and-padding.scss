@@ -1,77 +1,49 @@
 @import 'variables';
 
-@each $spacing, $spacing-value in $spacious-spacings {
+$spacing-types: (
+	m: margin,
+	p: padding
+);
+
+@each $spacing-type, $spacing-property in $spacing-types {
 	@each $breakpoint, $breakpoint-value in $spacious-breakpoints {
-		$prefix: if($breakpoint == none, '', #{$breakpoint}-);
-
 		@media (min-width: #{$breakpoint-value}) {
-		
-			.#{$prefix}pa#{$spacing} {
-				padding-left: $spacing-value;
-				padding-bottom: $spacing-value;
-				padding-right: $spacing-value;
-				padding-top: $spacing-value;
-			}
+			@each $spacing, $spacing-value in $spacious-spacings {
+				$prefix: if($breakpoint == none, '', #{$breakpoint}-);
+			
+				.#{$prefix}#{$spacing-type}a#{$spacing} {
+					#{$spacing-property}-left: $spacing-value;
+					#{$spacing-property}-bottom: $spacing-value;
+					#{$spacing-property}-right: $spacing-value;
+					#{$spacing-property}-top: $spacing-value;
+				}
 
-			.#{$prefix}pl#{$spacing} {
-				padding-left: $spacing-value;
-			}
+				.#{$prefix}#{$spacing-type}l#{$spacing} {
+					#{$spacing-property}-left: $spacing-value;
+				}
 
-			.#{$prefix}pb#{$spacing} {
-				padding-bottom: $spacing-value;
-			}
+				.#{$prefix}#{$spacing-type}b#{$spacing} {
+					#{$spacing-property}-bottom: $spacing-value;
+				}
 
-			.#{$prefix}pr#{$spacing} {
-				padding-right: $spacing-value;
-			}
+				.#{$prefix}#{$spacing-type}r#{$spacing} {
+					#{$spacing-property}-right: $spacing-value;
+				}
 
-			.#{$prefix}pt#{$spacing} {
-				padding-top: $spacing-value;
-			}
+				.#{$prefix}#{$spacing-type}t#{$spacing} {
+					#{$spacing-property}-top: $spacing-value;
+				}
 
-			.#{$prefix}pv#{$spacing} {
-				padding-bottom: $spacing-value;
-				padding-top: $spacing-value;
-			}
+				.#{$prefix}#{$spacing-type}v#{$spacing} {
+					#{$spacing-property}-bottom: $spacing-value;
+					#{$spacing-property}-top: $spacing-value;
+				}
 
-			.#{$prefix}ph#{$spacing} {
-				padding-left: $spacing-value;
-				padding-right: $spacing-value;
+				.#{$prefix}#{$spacing-type}h#{$spacing} {
+					#{$spacing-property}-left: $spacing-value;
+					#{$spacing-property}-right: $spacing-value;
+				}
 			}
-		
-			.#{$prefix}ma#{$spacing} {
-				margin-left: $spacing-value;
-				margin-bottom: $spacing-value;
-				margin-right: $spacing-value;
-				margin-top: $spacing-value;
-			}
-
-			.#{$prefix}ml#{$spacing} {
-				margin-left: $spacing-value;
-			}
-
-			.#{$prefix}mb#{$spacing} {
-				margin-bottom: $spacing-value;
-			}
-
-			.#{$prefix}mr#{$spacing} {
-				margin-right: $spacing-value;
-			}
-
-			.#{$prefix}mt#{$spacing} {
-				margin-top: $spacing-value;
-			}
-
-			.#{$prefix}mv#{$spacing} {
-				margin-bottom: $spacing-value;
-				margin-top: $spacing-value;
-			}
-
-			.#{$prefix}mh#{$spacing} {
-				margin-left: $spacing-value;
-				margin-right: $spacing-value;
-			}
-
 		}
 	}
 }
