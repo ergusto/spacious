@@ -4,7 +4,7 @@
 	@each $breakpoint, $breakpoint-value in $spacious-breakpoints {
 		$prefix: if($breakpoint == none, '', #{$breakpoint}-);
 
-		@media (min-width: #{breakpoint-value}) {
+		@media (min-width: #{$breakpoint-value}) {
 			.#{$prefix}w-1 { width: 1rem; }
 			.#{$prefix}w-2 { width: 2rem; }
 			.#{$prefix}w-3 { width: 4rem; }
