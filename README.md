@@ -2,11 +2,15 @@
 
 > A set of functional CSS utilities for all your spacing needs. 
 
-Padding and margin utilities formed on a ratio of your base font size. Classes follow a simple pattern:
+Padding, margin, width and max-width utilities formed on a ratio of your base font size. 
 
-> `{viewport}-{spacing-direction}{spacing-amount}`
+## Padding and Margin
 
-## Usage
+Padding and margin classes follow a simple pattern:
+
+> `{viewport}-{p or m}{spacing-direction}{spacing-amount}`
+
+### Usage
 
 For example:
 
@@ -15,6 +19,16 @@ For example:
 ```
 
 Translates to `margin-left-2` and `small-margin-left-3`. 
+
+## Widths and Max-Widths
+
+Widths and max widths work in a similar fashion, although come in relative and percentage based units:
+
+```html
+<div class='w-2 w-40' />
+```
+
+Translates to `width-2` and `width-40` (40%).
 
 ## Explanation
 

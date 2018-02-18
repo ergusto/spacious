@@ -1,0 +1,30 @@
+@import 'variables';
+
+@each $width, $width-value in $spacious-widths {
+	@each $breakpoint, $breakpoint-value in $spacious-breakpoints {
+		$prefix: if($breakpoint == none, '', #{$breakpoint}-);
+
+		@media (min-width: #{breakpoint-value}) {
+			.#{$prefix}w-1 { width: 1rem; }
+			.#{$prefix}w-2 { width: 2rem; }
+			.#{$prefix}w-3 { width: 4rem; }
+			.#{$prefix}w-4 { width: 8rem; }
+			.#{$prefix}w-5 { width: 16rem; }
+			.#{$prefix}w-6 { width: 32rem; }
+			.#{$prefix}w-7 { width: 48rem; }
+			.#{$prefix}w-8 { width: 64rem; }
+			.#{$prefix}w-9 { width: 96rem; }
+
+			.#{$prefix}w-10 { width: 10%; }
+			.#{$prefix}w-20 { width: 20%; }
+			.#{$prefix}w-30 { width: 30%; }
+			.#{$prefix}w-40 { width: 40%; }
+			.#{$prefix}w-50 { width: 50%; }
+			.#{$prefix}w-60 { width: 60%; }
+			.#{$prefix}w-70 { width: 70%; }
+			.#{$prefix}w-80 { width: 80%; }
+			.#{$prefix}w-90 { width: 90%; }
+			.#{$prefix}w-100 { width: 100%; }
+		}
+	}
+}

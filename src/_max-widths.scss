@@ -1,0 +1,30 @@
+@import 'variables';
+
+@each $width, $width-value in $spacious-widths {
+	@each $breakpoint, $breakpoint-value in $spacious-breakpoints {
+		$prefix: if($breakpoint == none, '', #{$breakpoint}-);
+
+		@media (min-width: #{breakpoint-value}) {
+			.#{$prefix}mw-1 { max-width: 1rem; }
+			.#{$prefix}mw-2 { max-width: 2rem; }
+			.#{$prefix}mw-3 { max-width: 4rem; }
+			.#{$prefix}mw-4 { max-width: 8rem; }
+			.#{$prefix}mw-5 { max-width: 16rem; }
+			.#{$prefix}mw-6 { max-width: 32rem; }
+			.#{$prefix}mw-7 { max-width: 48rem; }
+			.#{$prefix}mw-8 { max-width: 64rem; }
+			.#{$prefix}mw-9 { max-width: 96rem; }
+
+			.#{$prefix}mw-10 { max-width: 10%; }
+			.#{$prefix}mw-20 { max-width: 20%; }
+			.#{$prefix}mw-30 { max-width: 30%; }
+			.#{$prefix}mw-40 { max-width: 40%; }
+			.#{$prefix}mw-50 { max-width: 50%; }
+			.#{$prefix}mw-60 { max-width: 60%; }
+			.#{$prefix}mw-70 { max-width: 70%; }
+			.#{$prefix}mw-80 { max-width: 80%; }
+			.#{$prefix}mw-90 { max-width: 90%; }
+			.#{$prefix}mw-100 { max-width: 100%; }
+		}
+	}
+}

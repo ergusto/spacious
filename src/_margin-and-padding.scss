@@ -1,0 +1,77 @@
+@import 'variables';
+
+@each $spacing, $spacing-value in $spacious-spacings {
+	@each $breakpoint, $breakpoint-value in $spacious-breakpoints {
+		$prefix: if($breakpoint == none, '', #{$breakpoint}-);
+
+		@media (min-width: #{$breakpoint-value}) {
+		
+			.#{$prefix}pa#{$spacing} {
+				padding-left: $spacing-value;
+				padding-bottom: $spacing-value;
+				padding-right: $spacing-value;
+				padding-top: $spacing-value;
+			}
+
+			.#{$prefix}pl#{$spacing} {
+				padding-left: $spacing-value;
+			}
+
+			.#{$prefix}pb#{$spacing} {
+				padding-bottom: $spacing-value;
+			}
+
+			.#{$prefix}pr#{$spacing} {
+				padding-right: $spacing-value;
+			}
+
+			.#{$prefix}pt#{$spacing} {
+				padding-top: $spacing-value;
+			}
+
+			.#{$prefix}pv#{$spacing} {
+				padding-bottom: $spacing-value;
+				padding-top: $spacing-value;
+			}
+
+			.#{$prefix}ph#{$spacing} {
+				padding-left: $spacing-value;
+				padding-right: $spacing-value;
+			}
+		
+			.#{$prefix}ma#{$spacing} {
+				margin-left: $spacing-value;
+				margin-bottom: $spacing-value;
+				margin-right: $spacing-value;
+				margin-top: $spacing-value;
+			}
+
+			.#{$prefix}ml#{$spacing} {
+				margin-left: $spacing-value;
+			}
+
+			.#{$prefix}mb#{$spacing} {
+				margin-bottom: $spacing-value;
+			}
+
+			.#{$prefix}mr#{$spacing} {
+				margin-right: $spacing-value;
+			}
+
+			.#{$prefix}mt#{$spacing} {
+				margin-top: $spacing-value;
+			}
+
+			.#{$prefix}mv#{$spacing} {
+				margin-bottom: $spacing-value;
+				margin-top: $spacing-value;
+			}
+
+			.#{$prefix}mh#{$spacing} {
+				margin-left: $spacing-value;
+				margin-right: $spacing-value;
+			}
+
+		}
+	}
+}
