@@ -1,11 +1,18 @@
 @import 'variables';
 
-@each $breakpoint, $breakpoint-value in $spacious-breakpoints {
-	$prefix: if($breakpoint == none, '', #{$breakpoint}-);
+$width-types: (
+	w: width,
+	mw: max-width
+);
 
-	@media (min-width: #{$breakpoint-value}) {
-		@each $width, $width-value in $spacious-widths {
-			.#{$prefix}w-#{$width} { width: #{$width-value}; }
+@each $width-type, $width-property in $width-types {
+	@each $breakpoint, $breakpoint-value in $spacious-breakpoints {
+		$prefix: if($breakpoint == none, '', #{$breakpoint}-);
+
+		@media (min-width: #{$breakpoint-value}) {
+			@each $width, $width-value in $spacious-widths {
+				.#{$prefix}#{$width-type}-#{$width} { #{$width-property}: #{$width-value}; }
+			}
 		}
 	}
 }
