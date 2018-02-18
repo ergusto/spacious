@@ -4,7 +4,9 @@
   "description": "",
   "main": "spacious.css",
   "scripts": {
-    "build": "./node_modules/.bin/webpack --config webpack-config.js"
+    "build": "./node_modules/.bin/webpack --config webpack-config.js",
+    "minify": "./node_modules/.bin/minify spacious.css",
+    "prepublish": "npm run build && npm run minify"
   },
   "repository": {
     "type": "git",
@@ -25,6 +27,7 @@
   },
   "dependencies": {
     "css-loader": "^0.28.4",
+    "minifier": "^0.8.1",
     "style-loader": "^0.18.2"
   }
 }
