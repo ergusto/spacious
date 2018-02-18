@@ -6,7 +6,7 @@ Padding, margin, width and max-width utilities formed on a ratio of your base fo
 
 ## Padding and Margin
 
-The default spacing scale for padding and margin is based on powers of two and starts at .25rem (1), ending at 16rem (7).
+The default spacing scale for padding and margin is based on powers of two and starts at .25rem (1 spacing amount), ending at 16rem (7 spacing amount).
 
 Classes follow a simple pattern:
 
@@ -30,7 +30,7 @@ These classes follow a simple pattern:
 
 ### Relative
 
-The relative spacing scale for widths and max widths is also based on powers of two, but starts at 1rem (1) and ends at 64rem (8).
+The relative spacing scale for widths and max widths is also based on powers of two, but starts at 1rem (1 spacing amount) and ends at 64rem (8 spacing amount).
 
 ### Percentage
 
