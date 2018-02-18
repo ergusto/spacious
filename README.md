@@ -6,32 +6,40 @@ Padding, margin, width and max-width utilities formed on a ratio of your base fo
 
 ## Padding and Margin
 
-Padding and margin classes follow a simple pattern:
+The default spacing scale for padding and margin is based on powers of two and starts at .25rem (1), ending at 16rem (7).
+
+Classes follow a simple pattern:
 
 > `{viewport}-{p or m}{spacing-direction}{spacing-amount}`
 
-### Usage
-
-For example:
+### Example 
 
 ```html
-<p class='ml2 sm-ml3' />
+<p class='ml1 sm-ml3' />
 ```
 
-Translates to `margin-left-2` and `small-margin-left-3`. 
+Translates to `margin-left-1` (sets margin-left property to .25rem) and `small-margin-left-3` (sets margin-left property above the small breakpoint to 1rem). 
 
 ## Widths and Max-Widths
 
-Widths and max widths work in a similar fashion, although come in relative and percentage based units:
+Widths and max widths work in a similar fashion, although come in both relative and percentage based units. 
+
+These classes follow a simple pattern:
+
+> `{viewport}-{w or mw}-{spacing-amount}` 
+
+### Relative
+
+The relative spacing scale for widths and max widths is also based on powers of two, but starts at 1rem (1) and ends at 64rem (8).
+
+### Percentage
+
+Percentage based widths include a scale from 0-100 in multiples of 10, as well as the additional useful widths of 25%, 33%, 66% and 75%. 
+
+### Example 
 
 ```html
-<div class='w-2 w-40' />
+<div class='w-4 sm-mw-40 ' />
 ```
 
-Translates to `width-2` and `width-40` (40%).
-
-## Explanation
-
-Spacings start at a 1/4 of base font size (1 spacing amount) and go all the way up to 16 times base font size (7 spacing amount).
-
-With a base font size of 16, this would give the above paragraph a margin left property value of 8px below the mobile small breakpoint, and a margin left property value of 16px above.
+Translates to `width-4` (sets width to 8rem) and `small-max-width-40` (set width above the small breakpoint to 40%).
