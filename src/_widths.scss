@@ -1,17 +1,17 @@
 @import 'variables';
 
 $width-types: (
-	w: width,
-	mw: max-width
+	width: width,
+	max-width: max-width
 );
 
 @each $width-type, $width-property in $width-types {
 	@each $breakpoint, $breakpoint-value in $spacious-breakpoints {
-		$prefix: if($breakpoint == none, '', #{$breakpoint}-);
+		$suffix: if($breakpoint == none, '', -#{$breakpoint});
 
 		@media (min-width: #{$breakpoint-value}) {
 			@each $width, $width-value in $spacious-widths {
-				.#{$prefix}#{$width-type}-#{$width} { #{$width-property}: #{$width-value}; }
+				.#{$width-type}-#{$width}#{$suffix} { #{$width-property}: #{$width-value}; }
 			}
 		}
 	}
